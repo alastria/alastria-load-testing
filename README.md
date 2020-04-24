@@ -125,3 +125,12 @@ Depending on what kind of metrics you want to test you can use the next ones:
 * Transaction/read throughput
 * Transaction/read latency (minimum, maximum, average, percentile)
 * Resource consumption (CPU, Memory, Network IO, …)
+
+# Some References
+"Architecture -", Hyperledger Caliper, 2020. [Online]. Available: https://hyperledger.github.io/caliper/v0.3/architecture/. [Accessed: 14- April- 2020].
+
+"Writing Adapters", Hyperledger Caliper, 2020. [Online]. Available: https://hyperledger.github.io/caliper/v0.3/writing-adaptors/. [Accessed: 14- April- 2020].
+
+"Rate Controllers", Hyperledger Caliper, 2020. [Online]. Available: https://hyperledger.github.io/caliper/v0.3/rate-controllers/. [Accessed: 14- April- 2020].
+
+"Etherum Configuration", Hyperledger Caliper, 2020. [Online]. Available: https://hyperledger.github.io/caliper/v0.3/ethereum-config/. [Accessed: 14- April- 2020].

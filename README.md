@@ -9,7 +9,7 @@ It is necessary to install in your system previous to work with Caliper the next
  * Docker
  * Docker-compose
  
- # Instalation
+ # Installation
 Once you have requirements completed it is necessary to clone the caliper repository on your machine where you are going to run the caliper test.
 So executing git clone https://github.com/hyperledger/caliper.git you would be able to start to work with caliper
 Once you have clone this repository you have to go inside the main directory of caliper:

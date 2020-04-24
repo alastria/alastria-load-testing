@@ -48,3 +48,14 @@ It is important to know you must configure the Etherum configuration file to let
     }
 }
 ```
+These are the keys to provide inside the configuration file under the ethereum one:
+
+* URL of the node to connect to. Only http is currently supported.
+* Deployer address with which deploy required contracts
+* Deployer address private key the private key of the deployer address
+* Deployer address password to unlock the deployer address
+* Address from which invoke methods of the benchmark
+* Private Key the private key of the benchmark address
+* Password to unlock the benchmark address
+* Number of confirmation blocks to wait to consider a transaction as successfully accepted in the chain
+* Contracts configuration

@@ -59,3 +59,9 @@ These are the keys to provide inside the configuration file under the ethereum o
 * Password to unlock the benchmark address
 * Number of confirmation blocks to wait to consider a transaction as successfully accepted in the chain
 * Contracts configuration
+
+# Running a test
+To run a test with Caliper you just have to run the following command:
+```
+ caliper benchmark run -w <path to workspace> -c <benchmark config> -n <blockchain config>
+```

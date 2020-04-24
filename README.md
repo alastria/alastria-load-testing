@@ -22,6 +22,61 @@ Once you have clone this repository you have to go inside the main directory of 
    npx caliper launch master --caliper-workspace . --caliper-benchconfig benchmarks/scenario/simple/config.yaml \
     --caliper-networkconfig networks/ethereum/1node-clique/docker-compose.yml
 ```
+# Benchmark Configuration File
+An example of Benchmark Configuration file is this one. This file is important when you are going to run your tests
+```
+test:
+  name: simple
+  description: This is an example benchmark for caliper, to test the backend DLT's
+    performance with simple account opening & querying transactions
+  clients:
+    type: local
+    number: 1
+  rounds:
+  - label: open
+    description: Test description for the opening of an account through the deployed chaincode
+    txNumber:
+    - 100
+    rateControl:
+    - type: fixed-rate
+      opts:
+        tps: 50
+    arguments:
+      money: 10000
+    callback: benchmark/simple/open.js
+  - label: query
+    description: Test description for the query performance of the deployed chaincode
+    txNumber:
+    - 100
+    rateControl:
+    - type: fixed-rate
+      opts:
+        tps: 100
+    callback: benchmark/simple/query.js
+  - label: transfer
+    description: Test description for transfering money between accounts
+    txNumber:
+        - 100
+    rateControl:
+        - type: fixed-rate
+          opts:
+              tps: 50
+    arguments:
+        money: 100
+    callback: benchmark/simple/transfer.js
+monitor:
+  type:
+  - docker
+  - process
+  docker:
+    name:
+    - all
+  process:
+  - command: node
+    arguments: local-client.js
+    multiOutput: avg
+  interval: 1
+```
 # Etherum Configuration File
 It is important to know you must configure the Etherum configuration file to let Caliper to know some aspects about your Nodes configuration, for this reason an example of configuration file would be the next one:
 ```
@@ -65,3 +120,8 @@ To run a test with Caliper you just have to run the following command:
 ```
  caliper benchmark run -w <path to workspace> -c <benchmark config> -n <blockchain config>
 ```
+# Types of metrics you can see and use
+Depending on what kind of metrics you want to test you can use the next ones:
+* Transaction/read throughput
+* Transaction/read latency (minimum, maximum, average, percentile)
+* Resource consumption (CPU, Memory, Network IO, …)

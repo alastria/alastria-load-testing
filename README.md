@@ -22,3 +22,29 @@ Once you have clone this repository you have to go inside the main directory of 
    npx caliper launch master --caliper-workspace . --caliper-benchconfig benchmarks/scenario/simple/config.yaml \
     --caliper-networkconfig networks/ethereum/1node-clique/docker-compose.yml
 ```
+# Etherum Configuration File
+It is important to know you must configure the Etherum configuration file to let Caliper to know some aspects about your Nodes configuration, for this reason an example of configuration file would be the next one:
+```
+{
+    "caliper": {
+        "blockchain": "ethereum",
+        "command" : {
+            "start": "docker-compose -f network/ethereum/1node-clique/docker-compose.yml up -d && sleep 3",
+            "end" : "docker-compose -f network/ethereum/1node-clique/docker-compose.yml down"
+          }
+    },
+    "ethereum": {
+        "url": "http://localhost:8545",
+        "contractDeployerAddress": "0xc0A8e4D217eB85b812aeb1226fAb6F588943C2C2",
+        "contractDeployerAddressPassword": "password",
+        "fromAddress": "0xc0A8e4D217eB85b812aeb1226fAb6F588943C2C2",
+        "fromAddressPassword": "password",
+        "transactionConfirmationBlocks": 12,
+        "contracts": {
+            "simple": {
+                "path": "src/contract/ethereum/simple/simple.json"
+            }
+        }
+    }
+}
+```

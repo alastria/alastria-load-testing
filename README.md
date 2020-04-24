@@ -4,10 +4,10 @@ Documentation and scripts for load testing for Alastria Red-T Network
 
 # Requirements
 It is necessary to install in your system previous to work with Caliper the next components:
- *NodeJS 8 (LTS), 9, o 10 (LTS).
- *node-gyp
- *Docker
- *Docker-compose
+ * NodeJS 8 (LTS), 9, o 10 (LTS).
+ * node-gyp
+ * Docker
+ * Docker-compose
  
  # Instalation
 Once you have requirements completed it is necessary to clone the caliper repository on your machine where you are going to run the caliper test.

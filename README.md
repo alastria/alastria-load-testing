@@ -22,6 +22,39 @@ Once you have clone this repository you have to go inside the main directory of 
    npx caliper launch master --caliper-workspace . --caliper-benchconfig benchmarks/scenario/simple/config.yaml \
     --caliper-networkconfig networks/ethereum/1node-clique/ethereum.json
 ```
+As well if you run the last command and you have errors, problably you will have to change your genesis.json code as follow:
+```
+{
+  "config": {
+    "chainId": 21194,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0,
+    "ethash": {}
+  },
+  "nonce": "0x0",
+  "timestamp": "0x5cd09c57",
+  "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "gasLimit": "0x2faf080",
+  "difficulty": "0x80000",
+  "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "coinbase": "0x0000000000000000000000000000000000000000",
+  "alloc": {
+    "c0a8e4d217eb85b812aeb1226fab6f588943c2c2": {
+      "balance": "0x200000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "number": "0x0",
+  "gasUsed": "0x0",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+}
+```
+
 # Benchmark Configuration File
 An example of Benchmark Configuration file is this one. This file is important when you are going to run your tests
 ```

@@ -239,6 +239,7 @@ Depending on what kind of metrics you want to test you can use the next ones:
 * Transaction/read throughput
 * Transaction/read latency (minimum, maximum, average, percentile)
 * Resource consumption (CPU, Memory, Network IO, …)
+# Report examples
 
 # Some References
 "Architecture -", Hyperledger Caliper, 2020. [Online]. Available: https://hyperledger.github.io/caliper/v0.3/architecture/. [Accessed: 14- April- 2020].

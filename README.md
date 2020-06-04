@@ -240,7 +240,12 @@ Depending on what kind of metrics you want to test you can use the next ones:
 * Transaction/read latency (minimum, maximum, average, percentile)
 * Resource consumption (CPU, Memory, Network IO, …)
 # Report examples
-
+For T-Network:
+|Name|	Succ |	Fail |	Send Rate (TPS) |	Max Latency (s) |	Min Latency (s)|	Avg Latency (s) |	Throughput (TPS) |
+-----|:----:|:----:|:---------------:|:---------------:|:--------------:|:---------------:|:----------------:| 
+|open|	2000	|   0  | 	57.2	          |    23.23        |    	1.20	      |    8.28	        |    53.9          | 
+|query|	6000|  	0	 |  308.4          |   	0.23         |    	0.04       |	    0.05	       |    307.7         |
+|transfer|	100|	0	 |   50.6          |   	3.21         |    	1.20       |    	2.47        |   	19.4          |
 # Some References
 "Architecture -", Hyperledger Caliper, 2020. [Online]. Available: https://hyperledger.github.io/caliper/v0.3/architecture/. [Accessed: 14- April- 2020].
 

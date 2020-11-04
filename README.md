@@ -247,13 +247,15 @@ For T-Network:
 |query|	6000|  	0	 |  308.4          |   	0.23         |    	0.04       |	    0.05	       |    307.7         |
 |transfer|	100|	0	 |   50.6          |   	3.21         |    	1.20       |    	2.47        |   	19.4          |
 
-For Besu
+
 
 |Name|	Succ |	Fail |	Send Rate (TPS) |	Max Latency (s) |	Min Latency (s)|	Avg Latency (s) |	Throughput (TPS) |
 -----|:----:|:----:|:---------------:|:---------------:|:--------------:|:---------------:|:----------------:| 
-|open|	2000	|   0  | 	100.0	          |    29.32        |    	2.19	      |    17.93	        |    43.2          | 
-|query|	6000|  	0	 |  1340.2          |   	0.34         |    	0.03       |	    0.05	       |    1264.5         |
-|transfer|	100|	0	 |   100.0          |   	32.24         |    	1.19       |    18.17        |   	38.6          |
+|open|	300	|   0  | 	78.7	          |    5.92        |    	2.19	      |    3.63	        |    34.9          | 
+|query|	400|  	0	 |  283.9          |   	0.90         |    	0.07       |	    0.17	       |    246.5         |
+|transfer|	300|	0	 |   206.2          |   	19.95         |    	2.82       |    13.56        |   	14.5          |
+
+For Besu
 
 # Some References
 "Architecture -", Hyperledger Caliper, 2020. [Online]. Available: https://hyperledger.github.io/caliper/v0.3/architecture/. [Accessed: 14- April- 2020].

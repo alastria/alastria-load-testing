@@ -1,0 +1,22 @@
+{
+    "caliper": {
+        "blockchain": "ethereum",
+        "command" : {
+            "start": "docker-compose -f networks/ethereum/1node/docker-compose.yml up -d && sleep 3",
+            "end" : "docker-compose -f networks/ethereum/1node/docker-compose.yml down"
+          }
+    },
+    "ethereum": {
+        "url": "http://34.249.142.75/rpc",
+        "contractDeployerAddress": "0x7757ee49874c6198d8b51e9ecc131c37a99c4fcf",
+        "contractDeployerAddressPassword": "alastria",
+        "fromAddress": "0x7757ee49874c6198d8b51e9ecc131c37a99c4fcf",
+        "fromAddressPassword": "alastria",
+        "transactionConfirmationBlocks": 2,
+        "contracts": {
+            "simple": {
+                "path": "src/ethereum/simple/simple.json"
+            }
+        }
+    }
+}
